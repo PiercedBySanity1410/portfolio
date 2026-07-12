@@ -27,7 +27,7 @@ const roles = [
   },
   {
     period: '2024 — present',
-    title: 'Backend Lead',
+    title: 'Backend Assistant Lead',
     org: 'CTP Portal · NIT Jalandhar',
     link: 'https://ctp.nitj.ac.in/',
     points: [
@@ -36,7 +36,7 @@ const roles = [
       'Built role-based dashboards and optimized backend performance for peak placement seasons.',
     ],
     stack: ['React', 'Express', 'MongoDB', 'TailwindCSS'],
-  },
+  }
 ]
 
 export default function Experience() {
