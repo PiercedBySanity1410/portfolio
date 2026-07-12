@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 
 const links = [
   { label: 'email', value: 'gurjots.ds.23@nitj.ac.in', href: 'mailto:gurjots.ds.23@nitj.ac.in' },
+  { label: 'resume', value: 'resume.pdf ↗', href: '/resume.pdf', target: '_blank' },
   { label: 'github', value: 'github.com/gurjot', href: '#' },
   { label: 'linkedin', value: 'linkedin.com/in/gurjot', href: '#' },
   { label: 'leetcode', value: 'leetcode.com/gurjot', href: '#' },
@@ -39,6 +40,8 @@ export default function Contact() {
             <a
               key={l.label}
               href={l.href}
+              target={l.target}
+              rel={l.target ? 'noopener noreferrer' : undefined}
               style={{
                 display: 'flex',
                 gap: 14,

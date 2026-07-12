@@ -54,7 +54,7 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <a href="#contact" className="btn mono" style={{ padding: '8px 16px', fontSize: 12.5 }}>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn mono" style={{ padding: '8px 16px', fontSize: 12.5 }}>
           resume.pdf ↗
         </a>
       </nav>

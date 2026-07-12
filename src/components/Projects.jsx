@@ -70,10 +70,10 @@ export default function Projects() {
           {projects.map((p, i) => (
             <motion.article
               key={p.name}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.55, delay: i * 0.1 }}
+              transition={{ type: 'spring', stiffness: 100, damping: 20, delay: i * 0.15 }}
               style={{
                 border: '1px solid var(--border)',
                 borderRadius: 10,
@@ -81,8 +81,9 @@ export default function Projects() {
                 background: 'var(--surface)',
                 display: 'flex',
                 flexDirection: 'column',
+                cursor: 'pointer'
               }}
-              whileHover={{ y: -4, borderColor: 'var(--border-strong)' }}
+              whileHover={{ y: -6, scale: 1.02, borderColor: 'var(--accent)' }}
             >
               <div style={{ aspectRatio: '2 / 1' }}>
                 <ProjectGlyph seed={p.seed} />
