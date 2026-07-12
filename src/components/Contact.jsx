@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 const links = [
   { label: 'email', value: 'gurjots.ds.23@nitj.ac.in', href: 'mailto:gurjots.ds.23@nitj.ac.in' },
   { label: 'resume', value: 'resume.pdf ↗', href: '/resume.pdf', target: '_blank' },
-  { label: 'github', value: 'github.com/gurjot', href: '#' },
-  { label: 'linkedin', value: 'linkedin.com/in/gurjot', href: '#' },
-  { label: 'leetcode', value: 'leetcode.com/gurjot', href: '#' },
-  { label: 'codeforces', value: 'codeforces.com/gurjot', href: '#' },
+  { label: 'github', value: 'PiercedBySanity1410 ↗', href: 'https://github.com/PiercedBySanity1410', target: '_blank' },
+  { label: 'linkedin', value: 'gurjot-singh ↗', href: 'https://www.linkedin.com/in/gurjot-singh-79302034a/', target: '_blank' },
+  { label: 'leetcode', value: 'PiercedBySanity1410 ↗', href: 'https://leetcode.com/u/PiercedBySanity1410/', target: '_blank' },
+  { label: 'codeforces', value: 'PiercedBySanity1410 ↗', href: 'https://codeforces.com/profile/PiercedBySanity1410', target: '_blank' },
 ]
 
 export default function Contact() {

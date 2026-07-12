@@ -8,7 +8,7 @@ const projects = [
       "An end-to-end encrypted messaging platform built from the relay up — a Go WebSocket hub with Redis-backed queuing for offline delivery, ticket-based ECDSA authentication, and a two-layer packet protocol (routing envelope + AES-GCM encrypted, ECDSA-signed payload). Implements the Double Ratchet algorithm for perfect forward secrecy in 1-to-1 chats and Sender Keys for group scaling.",
     stack: ['Go', 'WebSockets', 'React.js', 'Protocol Buffers', 'PostgreSQL', 'Redis'],
     seed: 1,
-    links: { repo: '#' },
+    links: { repo: 'https://github.com/PiercedBySanity1410/Shadow-Room' },
   },
   {
     name: 'Amazon Review Sentiment Analyzer',
@@ -17,7 +17,7 @@ const projects = [
       'An NLP pipeline that preprocesses and vectorizes large e-commerce review datasets, then classifies polarity with a TF-IDF + LinearSVC model. Includes a full visualization layer for tracking product feedback trends over time.',
     stack: ['Python', 'Scikit-Learn', 'Pandas', 'Matplotlib'],
     seed: 2,
-    links: { repo: '#' },
+    links: { repo: 'https://github.com/PiercedBySanity1410' },
   },
 ]
 
@@ -97,7 +97,7 @@ export default function Projects() {
                     <span key={s} className="tag">{s}</span>
                   ))}
                 </div>
-                <a href={p.links.repo} className="mono" style={{ fontSize: 13, color: 'var(--accent)', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                <a href={p.links.repo} target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: 13, color: 'var(--accent)', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
                   view repository ↗
                 </a>
               </div>
