@@ -8,7 +8,7 @@ const projects = [
       "An end-to-end encrypted messaging platform built from the relay up — a Go WebSocket hub with Redis-backed queuing for offline delivery, ticket-based ECDSA authentication, and a two-layer packet protocol (routing envelope + AES-GCM encrypted, ECDSA-signed payload). Implements the Double Ratchet algorithm for perfect forward secrecy in 1-to-1 chats and Sender Keys for group scaling.",
     stack: ['Go', 'WebSockets', 'React.js', 'Protocol Buffers', 'PostgreSQL', 'Redis'],
     seed: 1,
-    links: { repo: 'https://github.com/PiercedBySanity1410/Shadow-Room' },
+    links: { repo: 'https://github.com/PiercedBySanity1410/Shadow-Room', website: 'https://shadow-room.gurjot.codes/' },
   },
   {
     name: 'Amazon Review Sentiment Analyzer',
@@ -86,7 +86,7 @@ export default function Projects() {
               whileHover={{ y: -6, scale: 1.02, borderColor: 'var(--accent)' }}
             >
               <div style={{ aspectRatio: '2 / 1' }}>
-                <ProjectGlyph seed={p.seed} />
+                <img src={`/project-${i + 1}.png`} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ padding: '22px 24px 26px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <div className="mono" style={{ fontSize: 11.5, color: 'var(--text-faint)', marginBottom: 8 }}>{p.tag}</div>
@@ -97,9 +97,18 @@ export default function Projects() {
                     <span key={s} className="tag">{s}</span>
                   ))}
                 </div>
-                <a href={p.links.repo} target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: 13, color: 'var(--accent)', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                  view repository ↗
-                </a>
+                <div style={{ display: 'flex', gap: 16 }}>
+                  {p.links.repo && (
+                    <a href={p.links.repo} target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: 13, color: 'var(--accent)', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                      view repository ↗
+                    </a>
+                  )}
+                  {p.links.website && (
+                    <a href={p.links.website} target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: 13, color: 'var(--accent)', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                      visit website ↗
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.article>
           ))}

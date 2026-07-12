@@ -30,9 +30,7 @@ export default function Nav() {
         left: 0,
         right: 0,
         zIndex: 50,
-        background: scrolled || mobileOpen ? 'rgba(10,14,20,0.92)' : 'transparent',
         backdropFilter: scrolled || mobileOpen ? 'blur(12px)' : 'none',
-        borderBottom: scrolled || mobileOpen ? '1px solid var(--border)' : '1px solid transparent',
         transition: 'background 0.3s ease, border-color 0.3s ease',
       }}
     >
