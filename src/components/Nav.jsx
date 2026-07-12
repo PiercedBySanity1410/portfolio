@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const LINKS = [
   { id: 'about', label: 'about' },
@@ -11,6 +11,7 @@ const LINKS = [
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -29,9 +30,9 @@ export default function Nav() {
         left: 0,
         right: 0,
         zIndex: 50,
-        background: scrolled ? 'rgba(10,14,20,0.82)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(10px)' : 'none',
-        borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
+        background: scrolled || mobileOpen ? 'rgba(10,14,20,0.92)' : 'transparent',
+        backdropFilter: scrolled || mobileOpen ? 'blur(12px)' : 'none',
+        borderBottom: scrolled || mobileOpen ? '1px solid var(--border)' : '1px solid transparent',
         transition: 'background 0.3s ease, border-color 0.3s ease',
       }}
     >
@@ -39,6 +40,8 @@ export default function Nav() {
         <a href="#top" className="mono" style={{ fontSize: 14, fontWeight: 700, letterSpacing: '-0.01em' }}>
           gurjot<span style={{ color: 'var(--accent)' }}>@</span>dev<span style={{ color: 'var(--text-faint)' }}>:~$</span>
         </a>
+
+        {/* Desktop Navigation Links */}
         <ul style={{ display: 'flex', gap: 28, listStyle: 'none' }} className="nav-links">
           {LINKS.map((l) => (
             <li key={l.id}>
@@ -54,13 +57,81 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn mono" style={{ padding: '8px 16px', fontSize: 12.5 }}>
-          resume.pdf ↗
-        </a>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn mono desktop-resume-btn" style={{ padding: '8px 16px', fontSize: 12.5 }}>
+            resume.pdf ↗
+          </a>
+
+          {/* Mobile Menu Toggle Button */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="mobile-menu-btn mono"
+            aria-label="Toggle Navigation Menu"
+            style={{
+              background: 'transparent',
+              border: '1px solid var(--border-strong)',
+              borderRadius: 6,
+              color: 'var(--text)',
+              padding: '7px 12px',
+              fontSize: 13,
+              display: 'none',
+              alignItems: 'center',
+              gap: 6
+            }}
+          >
+            <span style={{ color: 'var(--accent)' }}>{mobileOpen ? '×' : '≡'}</span>
+            <span>{mobileOpen ? 'close' : 'menu'}</span>
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile Navigation Drawer */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            style={{ overflow: 'hidden', borderTop: '1px solid var(--border)' }}
+            className="mobile-drawer"
+          >
+            <ul style={{ listStyle: 'none', padding: '16px 28px 24px', display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {LINKS.map((l) => (
+                <li key={l.id}>
+                  <a
+                    href={`#${l.id}`}
+                    onClick={() => setMobileOpen(false)}
+                    className="mono"
+                    style={{ fontSize: 15, color: 'var(--text)', display: 'block', padding: '4px 0' }}
+                  >
+                    <span style={{ color: 'var(--accent)' }}>./</span>{l.label}
+                  </a>
+                </li>
+              ))}
+              <li style={{ paddingTop: 8, borderTop: '1px solid var(--border)' }}>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileOpen(false)}
+                  className="btn primary mono"
+                  style={{ width: '100%', justifyContent: 'center', marginTop: 6 }}
+                >
+                  view resume.pdf ↗
+                </a>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <style>{`
         @media (max-width: 720px) {
-          .nav-links { display: none; }
+          .nav-links { display: none !important; }
+          .desktop-resume-btn { display: none !important; }
+          .mobile-menu-btn { display: inline-flex !important; }
         }
       `}</style>
     </motion.header>

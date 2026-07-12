@@ -94,6 +94,8 @@ function HandshakeDiagram() {
 
         {/* Animated Packets along Left/Right paths using direct keyframes */}
         <motion.circle
+          cx={70}
+          cy={140}
           r="4.5"
           fill="#55e6c1"
           animate={{
@@ -110,6 +112,8 @@ function HandshakeDiagram() {
         />
 
         <motion.circle
+          cx={370}
+          cy={140}
           r="4.5"
           fill="#8b7cf6"
           animate={{
@@ -128,6 +132,8 @@ function HandshakeDiagram() {
 
         {/* Packet traveling across E2EE Tunnel */}
         <motion.circle
+          cx={70}
+          cy={175}
           r="3.5"
           fill="#55e6c1"
           animate={{
@@ -146,6 +152,8 @@ function HandshakeDiagram() {
         {/* Relay Server Node (Top Center) */}
         <g transform="translate(220, 55)">
           <motion.circle
+            cx={0}
+            cy={0}
             r="28"
             fill="var(--surface-2)"
             stroke="url(#relayGrad)"
@@ -153,7 +161,7 @@ function HandshakeDiagram() {
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           />
-          <circle r="18" fill="var(--surface-3)" />
+          <circle cx={0} cy={0} r="18" fill="var(--surface-3)" />
           <path d="M -6 -4 L 0 -10 L 6 -4 M 0 -9 V 6 M -6 4 L 0 10 L 6 4" stroke="var(--text)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           <text y="42" textAnchor="middle" fill="var(--text)" fontSize="11" fontWeight="600" fontFamily="var(--mono)">RELAY HUB</text>
           <text y="55" textAnchor="middle" fill="var(--text-faint)" fontSize="9" fontFamily="var(--mono)">ZERO-KNOWLEDGE</text>
@@ -187,10 +195,10 @@ function HandshakeDiagram() {
       </svg>
 
       {/* Protocol Steps Footer */}
-      <div style={{
+      <div className="diagram-footer" style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: 8,
+        gap: 12,
         marginTop: 14,
         paddingTop: 14,
         borderTop: '1px solid var(--border)'
@@ -282,7 +290,11 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 860px) {
-          #top .wrap { grid-template-columns: 1fr !important; }
+          #top .wrap { grid-template-columns: 1fr !important; gap: 36px !important; }
+        }
+        @media (max-width: 640px) {
+          #top { padding-top: 110px !important; padding-bottom: 60px !important; }
+          .diagram-footer { grid-template-columns: 1fr !important; gap: 14px !important; }
         }
       `}</style>
     </section>

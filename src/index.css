@@ -195,3 +195,18 @@ section {
     scroll-behavior: auto !important;
   }
 }
+
+/* Global Mobile Responsiveness */
+@media (max-width: 600px) {
+  .wrap {
+    padding: 0 16px !important;
+  }
+  section {
+    padding: 64px 0 !important;
+  }
+  .btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
