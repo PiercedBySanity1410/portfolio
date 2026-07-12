@@ -5,6 +5,7 @@ const roles = [
     period: '2026',
     title: 'Full-Stack Developer',
     org: 'Third Space Travel · Freelance',
+    link: 'https://thirdspacetravel.com/',
     points: [
       'Developed a travel booking platform with 30+ REST APIs using React, TypeScript, Express, and MySQL.',
       'Integrated the PhonePe Payment Gateway SDK for secure online payments.',
@@ -16,6 +17,7 @@ const roles = [
     period: '2025 — present',
     title: 'Top Contributor',
     org: 'Xceed Timetable Module · NIT Jalandhar',
+    link: 'https://xceed.nitj.ac.in/',
     points: [
       'Revamped the timetable engine for conflict-free scheduling across 10+ departments.',
       'Implemented search, filtering, and Google Maps integration for 5000+ users.',
@@ -27,6 +29,7 @@ const roles = [
     period: '2024 — present',
     title: 'Backend Lead',
     org: 'CTP Portal · NIT Jalandhar',
+    link: 'https://ctp.nitj.ac.in/',
     points: [
       "Built and maintained backend services for NITJ's placement portal serving 1000+ students and 200+ recruiters.",
       'Developed 25+ secure REST APIs for placements, verification, and job workflows.',
@@ -78,11 +81,16 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: r.link ? 16 : 0 }}>
                 {r.stack.map((s) => (
                   <span key={s} className="tag">{s}</span>
                 ))}
               </div>
+              {r.link && (
+                <a href={r.link} target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: 13, color: 'var(--accent)', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                  see website ↗
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
