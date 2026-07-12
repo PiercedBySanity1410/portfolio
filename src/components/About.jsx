@@ -32,7 +32,7 @@ export default function About() {
             ordering, key exchange, concurrent state — and I like taking a project from
             a rough architecture sketch to something that survives real traffic.
             Outside of coursework, I lead backend for a placement portal used by 1000+
-            students, and I'm currently building an end-to-end encrypted chat platform
+            students, and I recently built a fully end-to-end encrypted chat platform
             from the WebSocket relay up.
           </motion.p>
 

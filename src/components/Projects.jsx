@@ -2,10 +2,10 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    name: 'Encrypted Chat System',
+    name: 'Shadow Room — E2E Encrypted Chat',
     tag: 'sole developer · 2026',
     desc:
-      "An end-to-end encrypted messaging platform built from the relay up — a Go WebSocket hub with Redis-backed queuing for offline delivery, ticket-based ECDSA authentication, and a two-layer packet protocol (routing envelope + AES-GCM encrypted, ECDSA-signed payload). Implements the Double Ratchet algorithm for perfect forward secrecy in 1-to-1 chats and Sender Keys for group scaling.",
+      "A fully completed end-to-end encrypted messaging platform supporting both one-to-one and group chatting. Built from the relay up with a Go WebSocket hub, Redis-backed queuing for offline delivery, and ticket-based ECDSA authentication. Implements the Double Ratchet algorithm for perfect forward secrecy in 1-to-1 chats and Sender Keys for secure group scaling.",
     stack: ['Go', 'WebSockets', 'React.js', 'Protocol Buffers', 'PostgreSQL', 'Redis'],
     seed: 1,
     links: { repo: 'https://github.com/PiercedBySanity1410/Shadow-Room', website: 'https://shadow-room.gurjot.codes/' },
