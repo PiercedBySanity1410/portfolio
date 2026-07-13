@@ -4,8 +4,8 @@ const stats = [
   { k: 'degree', v: 'B.Tech · Data Science & Engineering' },
   { k: 'institute', v: 'NIT Jalandhar' },
   { k: 'cgpa', v: '8.29 / 10' },
-  { k: 'leetcode', v: '700+ problems solved' },
-  { k: 'codeforces', v: 'Specialist · 1500+ rating' },
+  { k: 'leetcode', v: '750+ problems solved' },
+  { k: 'codeforces', v: 'Specialist · 1502 rating' },
 ]
 
 export default function About() {

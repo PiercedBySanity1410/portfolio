@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 
 const groups = [
-  { name: 'languages', items: ['C++', 'C', 'Go', 'TypeScript', 'JavaScript', 'Python'] },
-  { name: 'web', items: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'tRPC', 'gRPC', 'WebSockets', 'Prisma ORM', 'SQL'] },
-  { name: 'ai_ml', items: ['TensorFlow', 'Scikit-learn', 'OpenCV', 'LangChain', 'LangGraph', 'NLP', 'CNN / RNN / Transformers'] },
-  { name: 'data_infra', items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Firebase', 'Docker', 'Kubernetes'] },
+  { name: 'languages', items: ['C', 'C++', 'JavaScript', 'TypeScript', 'Python', 'Golang'] },
+  { name: 'web', items: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'WebSockets', 'tRPC', 'gRPC', 'Prisma ORM', 'Microservices'] },
+  { name: 'ai_ml', items: ['Deep Learning', 'NLP', 'TensorFlow', 'Scikit-learn', 'OpenCV', 'Pandas', 'LangChain', 'LangGraph', 'Agentic AI', 'RAG Systems', 'Vector Databases'] },
+  { name: 'data_infra', items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Docker', 'Kubernetes', 'AWS', 'Linux', 'REST APIs'] },
   { name: 'tooling', items: ['Git', 'GitHub', 'Figma', 'Google Colab', 'Jupyter'] },
 ]
 

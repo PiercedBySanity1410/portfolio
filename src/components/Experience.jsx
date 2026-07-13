@@ -2,6 +2,18 @@ import { motion } from 'framer-motion'
 
 const roles = [
   {
+    period: 'Jun 2026 — Present',
+    title: 'AI Agent Development Intern (AEH)',
+    org: 'Accenture · Bangalore',
+    link: '',
+    points: [
+      'Architected and deployed enterprise-grade AI agents leveraging Retrieval-Augmented Generation (RAG) pipelines.',
+      'Managed vector embeddings in scalable vector databases to improve semantic search and reduce hallucinations.',
+      'Integrated workflows via Node.js and Python backend services, building interactive React.js/Tailwind CSS interfaces.',
+    ],
+    stack: ['Node.js', 'Python', 'React', 'Tailwind CSS', 'RAG', 'LLMs', 'Vector Databases'],
+  },
+  {
     period: '2026',
     title: 'Full-Stack Developer',
     org: 'Third Space Travel · Freelance',
