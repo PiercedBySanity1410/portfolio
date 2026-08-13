@@ -11,13 +11,13 @@ const projects = [
     links: { repo: 'https://github.com/PiercedBySanity1410/Shadow-Room', website: 'https://shadow-room.gurjot.codes/' },
   },
   {
-    name: 'Amazon Review Sentiment Analyzer',
-    tag: 'course project · 2026',
+    name: 'Secure Token Allocation Platform',
+    tag: 'sole developer · 2026',
     desc:
-      'An NLP pipeline that preprocesses and vectorizes large e-commerce review datasets, then classifies polarity with a TF-IDF + LinearSVC model. Includes a full visualization layer for tracking product feedback trends over time.',
-    stack: ['Python', 'Scikit-Learn', 'Pandas', 'Matplotlib'],
+      'A real-time, app-less digital queue and token allocation platform. Features instant pass generation, live Server-Sent Events (SSE) position streaming, cryptographic QR verification with HMAC signatures, and dynamic administrative vendor management.',
+    stack: ['Go', 'Gin', 'React.js', 'TypeScript', 'PostgreSQL', 'SSE', 'IndexedDB'],
     seed: 2,
-    links: { repo: 'https://github.com/PiercedBySanity1410' },
+    links: { repo: 'https://github.com/PiercedBySanity1410/secure-token-allocation-frontend' },
   },
 ]
 
