@@ -17,7 +17,7 @@ const projects = [
       'A real-time, app-less digital queue and token allocation platform. Features instant pass generation, live Server-Sent Events (SSE) position streaming, cryptographic QR verification with HMAC signatures, and dynamic administrative vendor management.',
     stack: ['Go', 'Gin', 'React.js', 'TypeScript', 'PostgreSQL', 'SSE', 'IndexedDB'],
     seed: 2,
-    links: { repo: 'https://github.com/PiercedBySanity1410/secure-token-allocation-frontend' },
+    links: { repo: 'https://github.com/PiercedBySanity1410/secure-token-allocation-frontend', website: 'https://secure-token-alloc.gurjot.codes/' },
   },
 ]
 
